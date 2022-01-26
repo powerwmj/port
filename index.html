@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <link href="css/style.css" rel="stylesheet">
+    <script defer src="js/one_p.js"></script>
+    <title>powerwmj's portfolio</title>
+</head>
+<body>
+<div class="wrap">
+    <header>
+        <h1><a href="#"><img src="img/logo.png" alt="powerwmj"></a></h1>
+        <div class="menu">
+            <ul>
+                <li class="on a"><a href="#">Main</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">About PWJ</a></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <div class="content">
+            <div class="visual cnt01">
+                <img src="img/visual_01.jpg" id="slide">
+                <div class="per"><img src="img/visual_person.png"></div>
+                <div class="tit">
+                    <h2>Publisher & Front-end</h2>
+                    <h3>PowerwmJ</h3>
+                    
+                </div>
+            </div>
+            <div class="cnt02">
+                <div class="slider_w">
+                    <div class="slide">
+                        <div class="img">
+                            <img src="img/port_mad.png" alt="mad for garlic">
+                        </div>
+                        <div class="txt">
+                            <h3>매드 포 갈릭</h3>
+                            <ul>
+                                <li><span>Publishing</span> : 100%</li>
+                                <li><span>Design</span> : 0%</li>
+                                <li><span>Working period</span> : 2021.12.01 ~ 2022.02.11</li>
+                            </ul>
+                            <a href="#">Detail View</a>
+                        </div>
+                    </div>
+                    <div class="pager">
+                        <div class="arrow prev">
+                            <a href="#"><img src="img/pager_prev.png" alt="이전"></a>
+                        </div>
+                        <div><b>1</b> / 10</div>
+                        <div class="arrow next">
+                            <a href="#"><img src="img/pager_next.png" alt="다음"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cnt03">
+                <div class="info_w">
+                    <div class="left">
+                        <h3>Powerwmj</h3>
+                        <ul>
+                            <li><span>Name</span> Jun Eun Mi</li>
+                            <li><span>Birthday</span>1983.08.21</li>
+                            <li><span>Favorite color</span>Purple</li>
+                            <li><span>Hobby</span>Travel, Reading..</li>
+                            <li>
+                                <span>Why did you choose a publisher?</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="right">
+                        <h3 class="full">About</h3>
+                        <h3 class="line">PWJ</h3>
+                        <div class="cir1"></div>
+                        <div class="cir2"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+</div>
+</body>
+<script>
+    let img=new Array();
+    img[0]=new Image(); img[0].src="img/visual_01.jpg";
+    img[1]=new Image(); img[1].src="img/visual_02.jpg";
+    img[2]=new Image(); img[2].src="img/visual_03.jpg";
+    img[3]=new Image(); img[1].src="img/visual_04.jpg";
+    img[4]=new Image(); img[2].src="img/visual_05.jpg";
+    let interval=2500;
+    let n=0;
+    let imgs = new Array("img/visual_01.jpg","img/visual_02.jpg","img/visual_03.jpg","img/visual_04.jpg","img/visual_05.jpg");
+    function rotate()
+    {
+    if(navigator.appName=="Netscape" && document.getElementById)
+    {
+    document.getElementById("slide").src=imgs[n];
+    }
+    else document.images.slide.src=imgs[n];
+    (n==(imgs.length-1))?n=0:n++;
+    setTimeout("rotate()",interval);
+    }
+    rotate();
+    // 출처 : http://madalla.kr/bbs/board.php?bo_table=data_script&wr_id=32&sst=wr_hit&sod=desc&sop=and&page=2
+
+    
+
+</script>
+</html>
